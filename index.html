@@ -1,0 +1,278 @@
+
+
+<!DOCTYPE HTML>
+<html lang="ja">
+<head><title>Sample</title>
+
+<script type="text/javascript">
+
+function check() {
+    let str = [];
+    //ラジオボタンの中身を取得
+    const q = [document.shitsumon.q0, document.shitsumon.q1, document.shitsumon.q2, document.shitsumon.q3, document.shitsumon.q4, document.shitsumon.q5, document.shitsumon.q6, document.shitsumon.q7, document.shitsumon.q8, document.shitsumon.q9, document.shitsumon.q10, document.shitsumon.q11, document.shitsumon.q12, document.shitsumon.q13, document.shitsumon.q14, document.shitsumon.q15, document.shitsumon.q16, document.shitsumon.q17, document.shitsumon.q18, document.shitsumon.q19, document.shitsumon.q20, document.shitsumon.q21, document.shitsumon.q22, document.shitsumon.q23, document.shitsumon.q24, document.shitsumon.q25, document.shitsumon.q26, document.shitsumon.q27, document.shitsumon.q28];
+    //それぞれの合計点数を入れるための変数
+    var nnn = 0;
+    var xxx = 0;
+    var eee = 0;
+    var ooo = 0;
+    var aaa = 0;
+    var ccc = 0;
+    //どのラジオボタンが選択されたか判定し、点数を加算
+    for (let n = 0; n < q.length; n++) {
+        for (let i = 0; i < q[n].length; i++) {
+            if (q[n][i].checked) {
+                str[n] = q[n][i].value;
+                if (str[n] == "A") {
+                    nnn++;
+                } else if (str[n] == "B") {
+                    xxx++;
+                } else if (str[n] == "C") {
+                    eee++;
+                } else if (str[n] == "D") {
+                    ooo++;
+                } else if (str[n] == "E") {
+                    aaa++;
+                } else if (str[n] == "F") {
+                    ccc++;
+                }
+                break;
+            }
+        }
+    }
+    //コメントの条件分岐
+    var message = "";
+    if (nnn == 0) {
+        message = "あなたらしい材質は金属";
+    } else if (nnn == 1) {
+        message = "あなたらしい材質は石材";
+    } else if (nnn == 2) {
+        message = "あなたらしい材質はガラス";
+    } else if (nnn == 3) {
+        message = "あなたらしい材質はプラスチック";
+    } else if (nnn == 4) {
+        message = "あなたらしい材質は木材";
+    } else if (nnn == 5) {
+        message = "あなたらしい材質は布";
+    } else {
+        message = "エラー";
+    }
+    var message2 = "";
+    if (eee == 0) {
+        message2 = "色は青";
+    } else if (eee == 1) {
+        message2 = "色は紫";
+    } else if (eee == 2) {
+        message2 = "色は緑";
+    } else if (eee == 3) {
+        message2 = "色は黄色";
+    } else if (eee == 4) {
+        message2 = "色はオレンジ";
+    } else if (eee == 5) {
+        message2 = "色は赤";
+    } else {
+        message2 = "エラー";
+    }
+    var message3 = "";
+    if (ooo == 0) {
+        message3 = "色調はほとんどブラック";
+    } else if (ooo == 1) {
+        message3 = "色調はダーク";
+    } else if (ooo == 2) {
+        message3 = "色調はグレイッシュ";
+    } else if (ooo == 3) {
+        message3 = "色調はライトグレイッシュ";
+    } else if (ooo == 4) {
+        message3 = "色調はブライト";
+    } else if (ooo == 5) {
+        message3 = "色調はペール";
+    } else if (ooo == 6) {
+        message3 = "色調はほとんどホワイト";
+    } else {
+        message3 = "エラー";
+    }
+    var message4 = "";
+    if (aaa == 0) {
+        message4 = "角の処理はされていない（0㎜）";
+    } else if (aaa == 1) {
+        message4 = "角の処理はとがっている（Rが1㎜）";
+    } else if (aaa == 2) {
+        message4 = "角の処理はややとがっている（Rが2㎜）";
+    } else if (aaa == 3) {
+        message4 = "角の処理はふつう（Rが3㎜）";
+    } else if (aaa == 4) {
+        message4 = "角の処理はふつう（Rが4㎜）";
+    } else if (aaa == 5) {
+        message4 = "角の処理はまるい（Rが5㎜）";
+    } else if (aaa == 6) {
+        message4 = "角の処理はとてもまるい（Rが6㎜）";
+    } else {
+        message4 = "エラー";
+    }
+    var message5 = "";
+    if (aaa == 0) {
+        message5 = "表面の処理はざらざらしている";
+    } else if (ccc == 1) {
+        message5 = "表面の処理はマット加工";
+    } else if (ccc == 2) {
+        message5 = "表面の処理は素材そのまま";
+    } else if (ccc == 3) {
+        message5 = "表面の処理はやや磨かれている";
+    } else if (ccc == 4) {
+        message5 = "表面の処理はよく磨かれている";
+    } else if (ccc == 5) {
+        message5 = "表面の処理はよく磨かれており、透明感がある";
+    } else if (ccc == 6) {
+        message5 = "表面の処理はよく磨かれており、透明感があり、輝いている";
+    } else if (ccc == 7) {
+        message5 = "表面の処理はよく磨かれており、透明感があり、とてもよく輝いている";
+    }
+
+    //HTMLへ出力
+    var html = '<div>';
+    html += '' + message + '<br>';
+    html += '' + message2 + '<br>';
+    html += '' + message3 + '<br>';
+    html += '' + message4 + '<br>';
+    html += '' + message5 + '<br>';
+    html += '</div>';
+    document.getElementById("kekka").innerHTML = html;
+}
+
+</script>
+</head>
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>CMF as YOU</title>
+</head>
+<body>
+	<h1>CMF as YOU</h1>
+	<p>テスト</p>
+</body>
+
+<body>
+<form id="shitsumon" name="shitsumon" onsubmit="check(); return false;">
+<ul>
+<li>
+<p>あなたはあまり緊張をしない。</p>
+<label><input name="q0" type="radio" value="A" required="" />はい</label><br />
+<label><input name="q0" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたはあまり、物事を心配しない。</p>
+<label><input name="q1" type="radio" value="A" required="" />はい</label><br />
+<label><input name="q1" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは弱気になったことがない。</p>
+<label><input name="q2" type="radio" value="A" required="" />はい</label><br />
+<label><input name="q2" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたに大きな悩み事はない。</p>
+<label><input name="q3" type="radio" value="A" required="" />はい</label><br />
+<label><input name="q3" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたに不安なことはない。</p>
+<label><input name="q4" type="radio" value="A" required="" />はい</label><br />
+<label><input name="q4" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたはよくしゃべる。</p>
+<label><input name="q5" type="radio" value="C" required="" />はい</label><br />
+<label><input name="q5" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたの友達は多いほうだ。</p>
+<label><input name="q6" type="radio" value="C" required="" />はい</label><br />
+<label><input name="q6" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは他者の意見を聞くのが好きだ。</p>
+<label><input name="q7" type="radio" value="C" required="" />はい</label><br />
+<label><input name="q7" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは話好きだ。</p>
+<label><input name="q8" type="radio" value="C" required="" />はい</label><br />
+<label><input name="q8" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは元気に楽しく日常を過ごしていると思う。</p>
+<label><input name="q9" type="radio" value="C" required="" />はい</label><br />
+<label><input name="q9" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは多才だ。</p>
+<label><input name="q10" type="radio" value="D" required="" />はい</label><br />
+<label><input name="q10" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは先進的なものが好きだ。</p>
+<label><input name="q11" type="radio" value="D" required="" />はい</label><br />
+<label><input name="q11" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは頭の回転が速い自信がある。</p>
+<label><input name="q12" type="radio" value="D" required="" />はい</label><br />
+<label><input name="q12" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは興味が広い。</p>
+<label><input name="q13" type="radio" value="D" required="" />はい</label><br />
+<label><input name="q13" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは独創的だと言われたことがある。</p>
+<label><input name="q14" type="radio" value="D" required="" />はい</label><br />
+<label><input name="q14" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは好奇心が強い。</p>
+<label><input name="q15" type="radio" value="D" required="" />はい</label><br />
+<label><input name="q15" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたはあまり、怒らない。</p>
+<label><input name="q16" type="radio" value="E" required="" />はい</label><br />
+<label><input name="q16" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは他者の幸せを願っている。</p>
+<label><input name="q17" type="radio" value="E" required="" />はい</label><br />
+<label><input name="q17" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは気が長い。</p>
+<label><input name="q18" type="radio" value="E" required="" />はい</label><br />
+<label><input name="q18" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは困っている人を見かけると、放っておけない。</p>
+<label><input name="q19" type="radio" value="E" required="" />はい</label><br />
+<label><input name="q19" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは寛大だ。</p>
+<label><input name="q20" type="radio" value="E" required="" />はい</label><br />
+<label><input name="q20" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは温和だ。</p>
+<label><input name="q21" type="radio" value="E" required="" />はい</label><br />
+<label><input name="q21" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたはきっちりしている。</p>
+<label><input name="q22" type="radio" value="F" required="" />はい</label><br />
+<label><input name="q22" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは時間を守る。</p>
+<label><input name="q23" type="radio" value="F" required="" />はい</label><br />
+<label><input name="q23" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは成り行きに任せることが少ない。</p>
+<label><input name="q24" type="radio" value="F" required="" />はい</label><br />
+<label><input name="q24" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは勤勉だ。</p>
+<label><input name="q25" type="radio" value="F" required="" />はい</label><br />
+<label><input name="q25" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは計画性がある。</p>
+<label><input name="q26" type="radio" value="F" required="" />はい</label><br />
+<label><input name="q26" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは慎重な性格だ。</p>
+<label><input name="q27" type="radio" value="F" required="" />はい</label><br />
+<label><input name="q27" type="radio" value="B" />いいえ</label><br /></li>
+<li>
+<p>あなたは几帳面だ。</p>
+<label><input name="q28" type="radio" value="F" required="" />はい</label><br />
+<label><input name="q28" type="radio" value="B" />いいえ</label><br /></li>
+</ul>
+<input type="submit" value="判定！" class="hantei" /></form>
+<div id="kekka">ここに結果が出るよ！</div>
+
+</body>
+</html>
