@@ -1,4 +1,919 @@
-<!DOCTYPE ht<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>TEST Sample</title>
+<style type="text/css">
+<!--
+td.class1 {text-align:center;border:none;border-left:1px solid #333;border-top:1px solid#333;border-right:1px solid#333;border-bottom:1px solid#333;text-align:center;font-size:25px;font-family: "Arial", "メイリオ";cursor: pointer;}
+-->
+
+td.class2 {text-align:center;font-size:100px;font-family: "Arial", "メイリオ";}
+td.class3 {text-align:center;font-size:20px;font-family: "Arial", "メイリオ";}
+td.class4 {text-align:center;font-size:30px;font-family: "Arial", "メイリオ";}
+td.class5 {text-align:center;font-size:40px;font-family: "Arial", "メイリオ";}
+td.class6 {font-size:28px;font-family: "Arial", "メイリオ";}
+td.class7 {text-align:center;font-size:25px;font-family: "Arial", "メイリオ";}
+td.class7c {text-align:center;cursor: pointer;font-size:25px;font-family: "Arial", "メイリオ";}
+
+table.tiledBg {
+  background-image: url(https://github.com/ks1031str/CMF-as-YOU/blob/main/taptostart.jpg?raw=true);
+  background-size: 350px;
+  width: 350px;
+  height: 600px;
+  border: 0px solid;
+}
+
+div.layer0 {position: relative;}
+
+div.layer1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left:0%;
+}
+
+img.opa05 {opacity: 0.5;}
+
+
+td#start1:hover {background-color: #ccffcc;}
+td#end1:hover {background-color: #ccffcc;}
+td#quest1a:hover {background-color: #ccffcc;}
+td#quest1b:hover {background-color: #ccffcc;}
+td#quest1a:hover {background-color: #ccffcc;}
+td#quest1b:hover {background-color: #ccffcc;}
+td#quest2a:hover {background-color: #ccffcc;}
+td#quest2b:hover {background-color: #ccffcc;}
+td#quest3a:hover {background-color: #ccffcc;}
+td#quest3b:hover {background-color: #ccffcc;}
+td#quest4a:hover {background-color: #ccffcc;}
+td#quest4b:hover {background-color: #ccffcc;}
+td#quest5a:hover {background-color: #ccffcc;}
+td#quest5b:hover {background-color: #ccffcc;}
+td#quest6a:hover {background-color: #ccffcc;}
+td#quest6b:hover {background-color: #ccffcc;}
+td#quest7a:hover {background-color: #ccffcc;}
+td#quest7b:hover {background-color: #ccffcc;}
+td#quest8a:hover {background-color: #ccffcc;}
+td#quest8b:hover {background-color: #ccffcc;}
+td#quest9a:hover {background-color: #ccffcc;}
+td#quest9b:hover {background-color: #ccffcc;}
+td#quest10a:hover {background-color: #ccffcc;}
+td#quest10b:hover {background-color: #ccffcc;}
+td#quest11a:hover {background-color: #ccffcc;}
+td#quest11b:hover {background-color: #ccffcc;}
+td#quest12a:hover {background-color: #ccffcc;}
+td#quest12b:hover {background-color: #ccffcc;}
+td#quest13a:hover {background-color: #ccffcc;}
+td#quest13b:hover {background-color: #ccffcc;}
+td#quest14a:hover {background-color: #ccffcc;}
+td#quest14b:hover {background-color: #ccffcc;}
+td#quest15a:hover {background-color: #ccffcc;}
+td#quest15b:hover {background-color: #ccffcc;}
+td#quest16a:hover {background-color: #ccffcc;}
+td#quest16b:hover {background-color: #ccffcc;}
+td#quest17a:hover {background-color: #ccffcc;}
+td#quest17b:hover {background-color: #ccffcc;}
+td#quest18a:hover {background-color: #ccffcc;}
+td#quest18b:hover {background-color: #ccffcc;}
+td#quest19a:hover {background-color: #ccffcc;}
+td#quest19b:hover {background-color: #ccffcc;}
+td#quest20a:hover {background-color: #ccffcc;}
+td#quest20b:hover {background-color: #ccffcc;}
+td#quest21a:hover {background-color: #ccffcc;}
+td#quest21b:hover {background-color: #ccffcc;}
+td#quest22a:hover {background-color: #ccffcc;}
+td#quest22b:hover {background-color: #ccffcc;}
+td#quest23a:hover {background-color: #ccffcc;}
+td#quest23b:hover {background-color: #ccffcc;}
+td#quest24a:hover {background-color: #ccffcc;}
+td#quest24b:hover {background-color: #ccffcc;}
+td#quest25a:hover {background-color: #ccffcc;}
+td#quest25b:hover {background-color: #ccffcc;}
+td#quest26a:hover {background-color: #ccffcc;}
+td#quest26b:hover {background-color: #ccffcc;}
+td#quest27a:hover {background-color: #ccffcc;}
+td#quest27b:hover {background-color: #ccffcc;}
+td#quest28a:hover {background-color: #ccffcc;}
+td#quest28b:hover {background-color: #ccffcc;}
+td#quest29a:hover {background-color: #ccffcc;}
+</style>
+<script>
+
+var oncolor = '#ccffcc'; //オンの色
+var offcolor = '#ffffff';//オフの色
+var nnn = 0;//A
+var xxx = 0;//B
+var eee = 0;//C
+var ooo = 0;//D
+var aaa = 0;//E
+var ccc = 0;//F
+
+var q1 = "A"; //1つ目の質問の答え
+var q2 = "A"; //2つ目の質問の答え
+var q2 = "A"; //2つ目の質問の答え
+var q3 = "A"; //3つ目の質問の答え
+var q4 = "A"; //4つ目の質問の答え
+var q5 = "A"; //5つ目の質問の答え
+var q6 = "A"; //6つ目の質問の答え
+var q7 = "A"; //7つ目の質問の答え
+var q8 = "A"; //8つ目の質問の答え
+var q9 = "A"; //9つ目の質問の答え
+var q10 = "A"; //10つ目の質問の答え
+var q11 = "A"; //11つ目の質問の答え
+var q12 = "A"; //12つ目の質問の答え
+var q13 = "A"; //13つ目の質問の答え
+var q14 = "A"; //14つ目の質問の答え
+var q15 = "A"; //15つ目の質問の答え
+var q16 = "A"; //16つ目の質問の答え
+var q17 = "A"; //17つ目の質問の答え
+var q18 = "A"; //18つ目の質問の答え
+var q19 = "A"; //19つ目の質問の答え
+var q20 = "A"; //20つ目の質問の答え
+var q21 = "A"; //21つ目の質問の答え
+var q22 = "A"; //22つ目の質問の答え
+var q23 = "A"; //23つ目の質問の答え
+var q24 = "A"; //24つ目の質問の答え
+var q25 = "A"; //25つ目の質問の答え
+var q26 = "A"; //26つ目の質問の答え
+var q27 = "A"; //27つ目の質問の答え
+var q28 = "A"; //28つ目の質問の答え
+var q29 = "A"; //28つ目の質問の答え
+
+
+//スタートページ→説明
+function page0() {
+ document.getElementById("start").style.display ="none";
+ document.getElementById("page1").style.display  ="block";
+
+}
+//説明ページ→1ぺージ
+function page1() {
+ document.getElementById("page1").style.display ="none";
+ document.getElementById("page2").style.display  ="block";
+}
+
+//ページ1→2
+//1つ目の質問の動作
+function ChgQst1a() {
+ q1 = "A";
+ nnn++;
+ document.getElementById("page2").style.display ="none";
+ document.getElementById("page3").style.display  ="block";
+ }
+function ChgQst1b() {
+ q1 = "B";
+ xxx++;
+ document.getElementById("page2").style.display ="none";
+ document.getElementById("page3").style.display  ="block";
+ }
+//2つ目の質問の動作
+function ChgQst2a() {
+ q2 = "A";
+ nnn++;
+ document.getElementById("page3").style.display ="none";
+ document.getElementById("page4").style.display  ="block";
+ }
+function ChgQst2b() {
+ q2 = "B";
+ xxx++;
+ document.getElementById("page3").style.display ="none";
+ document.getElementById("page4").style.display  ="block";
+ }
+//3つ目の質問の動作
+function ChgQst3a() {
+ q3 = "A";
+ nnn++;
+ document.getElementById("page4").style.display ="none";
+ document.getElementById("page5").style.display  ="block";
+ }
+function ChgQst3b() {
+ q3 = "B";
+ xxx++;
+ document.getElementById("page4").style.display ="none";
+ document.getElementById("page5").style.display  ="block";
+ }
+//4つ目の質問の動作
+function ChgQst4a() {
+ q4 = "A";
+ nnn++;
+ document.getElementById("page5").style.display ="none";
+ document.getElementById("page6").style.display  ="block";
+ }
+function ChgQst4b() {
+ q4 = "B";
+ xxx++;
+ document.getElementById("page5").style.display ="none";
+ document.getElementById("page6").style.display  ="block";
+ }
+//5つ目の質問の動作
+function ChgQst5a() {
+ q5 = "A";
+ nnn++;
+ document.getElementById("page6").style.display ="none";
+ document.getElementById("page7").style.display  ="block";
+ }
+function ChgQst5b() {
+ q5 = "B";
+ xxx++;
+ document.getElementById("page6").style.display ="none";
+ document.getElementById("page7").style.display  ="block";
+ }
+//6つ目の質問の動作
+function ChgQst6a() {
+ q6 = "C";
+ eee++;
+ document.getElementById("page7").style.display ="none";
+ document.getElementById("page8").style.display  ="block";
+ }
+function ChgQst6b() {
+ q6 = "B";
+ xxx++;
+ document.getElementById("page7").style.display ="none";
+ document.getElementById("page8").style.display  ="block";
+ }
+//7つ目の質問の動作
+function ChgQst7a() {
+ q7 = "C";
+ eee++;
+ document.getElementById("page8").style.display ="none";
+ document.getElementById("page9").style.display  ="block";
+ }
+function ChgQst7b() {
+ q7 = "B";
+ xxx++;
+ document.getElementById("page8").style.display ="none";
+ document.getElementById("page9").style.display  ="block";
+ }
+//8つ目の質問の動作
+function ChgQst8a() {
+ q8 = "C";
+ eee++;
+ document.getElementById("page9").style.display ="none";
+ document.getElementById("page10").style.display  ="block";
+ }
+function ChgQst8b() {
+ q8 = "B";
+ xxx++;
+ document.getElementById("page9").style.display ="none";
+ document.getElementById("page10").style.display  ="block";
+ }
+//9つ目の質問の動作
+function ChgQst9a() {
+ q9 = "C";
+ eee++;
+ document.getElementById("page10").style.display ="none";
+ document.getElementById("page11").style.display  ="block";
+ }
+function ChgQst9b() {
+ q9 = "B";
+ xxx++;
+ document.getElementById("page10").style.display ="none";
+ document.getElementById("page11").style.display  ="block";
+ }
+//10個目の質問の動作
+function ChgQst10a() {
+ q10 = "C";
+ eee++;
+ document.getElementById("page11").style.display ="none";
+ document.getElementById("page12").style.display  ="block";
+ }
+function ChgQst10b() {
+ q10 = "B";
+ xxx++;
+ document.getElementById("page11").style.display ="none";
+ document.getElementById("page12").style.display  ="block";
+ }
+//11個目の質問の動作
+function ChgQst11a() {
+ q11 = "D";
+ ooo++;
+ document.getElementById("page12").style.display ="none";
+ document.getElementById("page13").style.display  ="block";
+ }
+function ChgQst11b() {
+ q11 = "B";
+ xxx++;
+ document.getElementById("page12").style.display ="none";
+ document.getElementById("page13").style.display  ="block";
+ }
+//12個目の質問の動作
+function ChgQst12a() {
+ q12 = "D";
+ ooo++;
+ document.getElementById("page13").style.display ="none";
+ document.getElementById("page14").style.display  ="block";
+ }
+function ChgQst12b() {
+ q12 = "B";
+ xxx++;
+ document.getElementById("page13").style.display ="none";
+ document.getElementById("page14").style.display  ="block";
+ }
+//13個目の質問の動作
+function ChgQst13a() {
+ q13 = "D";
+ ooo++;
+ document.getElementById("page14").style.display ="none";
+ document.getElementById("page15").style.display  ="block";
+ }
+function ChgQst13b() {
+ q13 = "B";
+ xxx++;
+ document.getElementById("page14").style.display ="none";
+ document.getElementById("page15").style.display  ="block";
+ }
+//14個目の質問の動作
+function ChgQst14a() {
+ q14 = "D";
+ ooo++;
+ document.getElementById("page15").style.display ="none";
+ document.getElementById("page16").style.display  ="block";
+ }
+function ChgQst14b() {
+ q14 = "B";
+ xxx++;
+ document.getElementById("page15").style.display ="none";
+ document.getElementById("page16").style.display  ="block";
+ }
+//15個目の質問の動作
+function ChgQst15a() {
+ q15 = "D";
+ ooo++;
+ document.getElementById("page16").style.display ="none";
+ document.getElementById("page17").style.display  ="block";
+ }
+function ChgQst15b() {
+ q15 = "B";
+ xxx++;
+ document.getElementById("page16").style.display ="none";
+ document.getElementById("page17").style.display  ="block";
+ }
+//16個目の質問の動作
+function ChgQst16a() {
+ q16 = "D";
+ ooo++;
+ document.getElementById("page17").style.display ="none";
+ document.getElementById("page18").style.display  ="block";
+ }
+function ChgQst16b() {
+ q16 = "B";
+ xxx++;
+ document.getElementById("page17").style.display ="none";
+ document.getElementById("page18").style.display  ="block";
+ }
+//17個目の質問の動作
+function ChgQst17a() {
+ q17 = "E";
+ aaa++;
+ document.getElementById("page18").style.display ="none";
+ document.getElementById("page19").style.display  ="block";
+ }
+function ChgQst17b() {
+ q17 = "B";
+ xxx++;
+ document.getElementById("page18").style.display ="none";
+ document.getElementById("page19").style.display  ="block";
+ }
+//18個目の質問の動作
+function ChgQst18a() {
+ q18 = "E";
+ aaa++;
+ document.getElementById("page19").style.display ="none";
+ document.getElementById("page20").style.display  ="block";
+ }
+function ChgQst18b() {
+ q18 = "B";
+ xxx++;
+ document.getElementById("page19").style.display ="none";
+ document.getElementById("page20").style.display  ="block";
+ }
+//19個目の質問の動作
+function ChgQst19a() {
+ q19 = "E";
+ aaa++;
+ document.getElementById("page20").style.display ="none";
+ document.getElementById("page21").style.display  ="block";
+ }
+function ChgQst19b() {
+ q19 = "B";
+ xxx++;
+ document.getElementById("page20").style.display ="none";
+ document.getElementById("page21").style.display  ="block";
+ }
+//20個目の質問の動作
+function ChgQst20a() {
+ q20 = "E";
+ aaa++;
+ document.getElementById("page21").style.display ="none";
+ document.getElementById("page22").style.display  ="block";
+ }
+function ChgQst20b() {
+ q20 = "B";
+ xxx++;
+ document.getElementById("page21").style.display ="none";
+ document.getElementById("page22").style.display  ="block";
+ }
+//21個目の質問の動作
+function ChgQst21a() {
+ q21 = "E";
+ aaa++;
+ document.getElementById("page22").style.display ="none";
+ document.getElementById("page23").style.display  ="block";
+ }
+function ChgQst21b() {
+ q21 = "B";
+ xxx++;
+ document.getElementById("page22").style.display ="none";
+ document.getElementById("page23").style.display  ="block";
+ }
+//22個目の質問の動作
+function ChgQst22a() {
+ q22 = "E";
+ aaa++;
+ document.getElementById("page23").style.display ="none";
+ document.getElementById("page24").style.display  ="block";
+ }
+function ChgQst22b() {
+ q22 = "B";
+ xxx++;
+ document.getElementById("page23").style.display ="none";
+ document.getElementById("page24").style.display  ="block";
+ }
+//23個目の質問の動作
+function ChgQst23a() {
+ q23 = "F";
+ ccc++;
+ document.getElementById("page24").style.display ="none";
+ document.getElementById("page25").style.display  ="block";
+ }
+function ChgQst23b() {
+ q23 = "B";
+ xxx++;
+ document.getElementById("page24").style.display ="none";
+ document.getElementById("page25").style.display  ="block";
+ }
+//24個目の質問の動作
+function ChgQst24a() {
+ q24 = "F";
+ ccc++;
+ document.getElementById("page25").style.display ="none";
+ document.getElementById("page26").style.display  ="block";
+ }
+function ChgQst24b() {
+ q24 = "B";
+ xxx++;
+ document.getElementById("page25").style.display ="none";
+ document.getElementById("page26").style.display  ="block";
+ }
+//25個目の質問の動作
+function ChgQst25a() {
+ q25 = "F";
+ ccc++;
+ document.getElementById("page26").style.display ="none";
+ document.getElementById("page27").style.display  ="block";
+ }
+function ChgQst25b() {
+ q25 = "B";
+ xxx++;
+ document.getElementById("page26").style.display ="none";
+ document.getElementById("page27").style.display  ="block";
+ }
+//26個目の質問の動作
+function ChgQst26a() {
+ q26 = "F";
+ ccc++;
+ document.getElementById("page27").style.display ="none";
+ document.getElementById("page28").style.display  ="block";
+ }
+function ChgQst26b() {
+ q26 = "B";
+ xxx++;
+ document.getElementById("page27").style.display ="none";
+ document.getElementById("page28").style.display  ="block";
+ }
+//27個目の質問の動作
+function ChgQst27a() {
+ q27 = "F";
+ ccc++;
+ document.getElementById("page28").style.display ="none";
+ document.getElementById("page29").style.display  ="block";
+ }
+function ChgQst27b() {
+ q27 = "B";
+ xxx++;
+ document.getElementById("page28").style.display ="none";
+ document.getElementById("page29").style.display  ="block";
+ }
+//28個目の質問の動作
+function ChgQst28a() {
+ q28 = "F";
+ ccc++;
+ document.getElementById("page29").style.display ="none";
+ document.getElementById("page30").style.display  ="block";
+ }
+function ChgQst28b() {
+ q28 = "B";
+ xxx++;
+ document.getElementById("page29").style.display ="none";
+ document.getElementById("page30").style.display  ="block";
+ }
+//29個目の質問の動作
+function ChgQst29a() {
+ q29 = "F";
+ ccc++;
+ document.getElementById("page30").style.display ="none";
+ document.getElementById("anser_itiran").style.display  ="block";
+ check();
+ }
+function ChgQst29b() {
+ q29 = "B";
+ xxx++;
+ document.getElementById("page30").style.display ="none";
+ document.getElementById("anser_itiran").style.display  ="block";
+ check();
+ }
+
+function check() {
+//    let str = [];
+    //ラジオボタンの中身を取得
+//   const q = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26, q27, q28 ,q29];
+    //それぞれの合計点数を入れるための変数
+//    var nnn = 0;//A
+//    var xxx = 0;//B
+//    var eee = 0;//C
+//    var ooo = 0;//D
+//    var aaa = 0;//E
+//    var ccc = 0;//F
+
+    //どのラジオボタンが選択されたか判定し、点数を加算
+
+//    for (let n = 1; n < q.length; n++) {
+//       for (let i = 0; i < q[n].length; i++) {
+//            if (q[n][i].checked) {
+//               str[n] = q[n][i].value;
+//              if (str[n] == "A") {
+//                    nnn++;
+//                } else if (str[n] == "B") {
+//                    xxx++;
+//                } else if (str[n] == "C") {
+//                    eee++;
+//                } else if (str[n] == "D") {
+//                    ooo++;
+//                } else if (str[n] == "E") {
+//                    aaa++;
+//                } else if (str[n] == "F") {
+//                    ccc++;
+//                }
+//                break;
+ //           }
+//       }
+//    }
+
+//	alert(nnn);
+//	alert(xxx);
+//	alert(eee);
+//	alert(ooo);
+//	alert(aaa);
+//	alert(ccc);
+
+    //コメントの条件分岐
+    var message = "";
+    if (nnn == 0) {
+        message = "あなたらしい<br>材質は<B>金属</B>";
+    } else if (nnn == 1) {
+        message = "あなたらしい<br>材質は<B>石材</B>";
+    } else if (nnn == 2) {
+        message = "あなたらしい<br>材質は<B>ガラス</B>";
+    } else if (nnn == 3) {
+        message = "あなたらしい<br>材質は<B>プラスチック</B>";
+    } else if (nnn == 4) {
+        message = "あなたらしい<br>材質は<B>木材</B>";
+    } else if (nnn == 5) {
+        message = "あなたらしい<br>材質は<B>布</B>";
+    } else {
+        message = "エラー";
+    }
+    var message2 = "";
+    if (eee == 0) {
+        message2 = "色は<B>青</B>";
+    } else if (eee == 1) {
+        message2 = "色は<B>紫</B>";
+    } else if (eee == 2) {
+        message2 = "色は<B>緑</B>";
+    } else if (eee == 3) {
+        message2 = "色は<B>黄色</B>";
+    } else if (eee == 4) {
+        message2 = "色は<B>オレンジ</B>";
+    } else if (eee == 5) {
+        message2 = "色は<B>赤</B>";
+    } else {
+        message2 = "エラー";
+    }
+    var message3 = "";
+    if (ooo == 0) {
+        message3 = "色調は<B>ほとんどブラック</B>";
+    } else if (ooo == 1) {
+        message3 = "色調は<B>ダーク</B>";
+    } else if (ooo == 2) {
+        message3 = "色調は<B>グレイッシュ</B>";
+    } else if (ooo == 3) {
+        message3 = "色調は<B>ライトグレイッシュ</B>";
+    } else if (ooo == 4) {
+        message3 = "色調は<B>ブライト</B>";
+    } else if (ooo == 5) {
+        message3 = "色調は<B>ペール</B>";
+    } else if (ooo == 6) {
+        message3 = "色調は<B>ほとんどホワイト</B>";
+    } else {
+        message3 = "エラー";
+    }
+    var message4 = "";
+    if (aaa == 0) {
+        message4 = "角の処理はされていない（0㎜）</B>";
+    } else if (aaa == 1) {
+        message4 = "角の処理は<B>とがっている（Rが1㎜）</B>";
+    } else if (aaa == 2) {
+        message4 = "角の処理は<B>ややとがっている（Rが2㎜）</B>";
+    } else if (aaa == 3) {
+        message4 = "角の処理は<B>ふつう（Rが3㎜）</B>";
+    } else if (aaa == 4) {
+        message4 = "角の処理は<B>ふつう（Rが4㎜）</B>";
+    } else if (aaa == 5) {
+        message4 = "角の処理は<B>まるい（Rが5㎜）</B>";
+    } else if (aaa == 6) {
+        message4 = "角の処理は<B>とてもまるい（Rが6㎜）</B>";
+    } else {
+        message4 = "エラー";
+    }
+    var message5 = "";
+    if (aaa == 0) {
+        message5 = "表面の処理は<B>ざらざらしている</B>";
+    } else if (ccc == 1) {
+        message5 = "表面の処理は<B>マット加工</B>";
+    } else if (ccc == 2) {
+        message5 = "表面の処理は<B>素材そのまま</B>";
+    } else if (ccc == 3) {
+        message5 = "表面の処理は<B>やや磨かれている</B>";
+    } else if (ccc == 4) {
+        message5 = "表面の処理は<B>よく磨かれている</B>";
+    } else if (ccc == 5) {
+        message5 = "表面の処理は<B>よく磨かれており、透明感がある</B>";
+    } else if (ccc == 6) {
+        message5 = "表面の処理は<B>よく磨かれており、透明感があり、輝いている</B>";
+    } else if (ccc == 7) {
+        message5 = "表面の処理は<B>よく磨かれており、透明感があり、とてもよく輝いている</B>";
+    }
+
+    //HTMLへ出力
+    var html = '<div>';
+    html += '' + message + '<br>';
+    html += '' + message2 + '<br>';
+    html += '' + message3 + '<br>';
+    html += '' + message4 + '<br>';
+    html += '' + message5 + '<br>';
+    html += '</div>';
+    document.getElementById("kekka").innerHTML = html;
+}
+</script>
+<body>
+<!-- page0-->
+<center>
+<table border=0 id = "start" style="display:block;" width="350" class="tiledBg">
+<tr><td height="400" width="350" class="class7c" onclick="page0();"><center><br><br><br><br><br><br></center></td></tr>
+<tr><td height="200" class="class4" onclick="page0();"></td></tr>
+</table>
+
+
+<!-- page1-->
+<table border=0 id = "page1" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>0/29</center></td></tr>
+<tr><td height="250" width="350" colspan=3 class="class7"><center><br><br>29問の質問に答えて<BR>アバターをGET<br><br><br><br></center></td></tr>
+<tr><td height="150"width="45%" class="class3"><center>YES<br><br>NO</center></td><td width="5%" style="text-align:center;" class="class4"><center>→</center></td><td width="50%" style="text-align:center;" >
+<div class="layer0">
+<img src="https://github.com/ks1031str/CMF-as-YOU/blob/main/setumei.jpg?raw=true" >
+  </div>
+</div>
+</td></tr>
+<tr><td height="50" colspan=3></td></tr>
+<tr><td height="50" class="class1" id="start1" colspan=3 onclick="page1();"><center>OK</center></td></tr>
+</table>
+
+<!-- page2-->
+<table border=0 id = "page2" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>1/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あまり緊張をしない<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest1a" onclick="ChgQst1a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest1b" onclick="ChgQst1b();"><center>いいえ</center></td></tr></table>
+<!-- page3-->
+<table border=0 id = "page3" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>2/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あまり物事を心配しない<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest2a" onclick="ChgQst2a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest2b" onclick="ChgQst2b();"><center>いいえ</center></td></tr></table>
+<!-- page4-->
+<table border=0 id = "page4" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>3/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>弱気になったことがない<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest3a" onclick="ChgQst3a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest3b" onclick="ChgQst3b();"><center>いいえ</center></td></tr></table>
+<!-- page5-->
+<table border=0 id = "page5" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>4/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>大きな悩み事はない<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest4a" onclick="ChgQst4a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest4b" onclick="ChgQst4b();"><center>いいえ</center></td></tr></table>
+<!-- page6-->
+<table border=0 id = "page6" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>5/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>不安なことはない<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest5a" onclick="ChgQst5a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest5b" onclick="ChgQst5b();"><center>いいえ</center></td></tr></table>
+<!-- page7-->
+<table border=0 id = "page7" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>6/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>よくしゃべる<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest6a" onclick="ChgQst6a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest6b" onclick="ChgQst6b();"><center>いいえ</center></td></tr></table>
+<!-- page8-->
+<table border=0 id = "page8" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>7/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>友達は多いほう<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest7a" onclick="ChgQst7a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest7b" onclick="ChgQst7b();"><center>いいえ</center></td></tr></table>
+<!-- page9-->
+<table border=0 id = "page9" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>8/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>他者の意見を聞くのが好きだ<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest8a" onclick="ChgQst8a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest8b" onclick="ChgQst8b();"><center>いいえ</center></td></tr></table>
+<!-- page10-->
+<table border=0 id = "page10" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>9/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>話好きだ。<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest9a" onclick="ChgQst9a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest9b" onclick="ChgQst9b();"><center>いいえ</center></td></tr></table>
+<!-- page11-->
+<table border=0 id = "page11" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>10/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>元気に楽しく日常を過ごしていると思う。<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest10a" onclick="ChgQst10a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest10b" onclick="ChgQst10b();"><center>いいえ</center></td></tr></table>
+<!-- page12-->
+<table border=0 id = "page12" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>11/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>多才だ。<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest11a" onclick="ChgQst11a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest11b" onclick="ChgQst11b();"><center>いいえ</center></td></tr></table>
+<!-- page13-->
+<table border=0 id = "page13" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>12/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>先進的なものが好きだ。<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest12a" onclick="ChgQst12a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest12b" onclick="ChgQst12b();"><center>いいえ</center></td></tr></table>
+<!-- page14-->
+<table border=0 id = "page14" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>13/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>頭の回転が速い自信がある。<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest13a" onclick="ChgQst13a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest13b" onclick="ChgQst13b();"><center>いいえ</center></td></tr></table>
+<!-- page15-->
+<table border=0 id = "page15" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>14/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>興味が広い。<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest14a" onclick="ChgQst14a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest14b" onclick="ChgQst14b();"><center>いいえ</center></td></tr></table>
+<!-- page16-->
+<table border=0 id = "page16" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>15/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>独創的だと言われたことがある。<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest15a" onclick="ChgQst15a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest15b" onclick="ChgQst15b();"><center>いいえ</center></td></tr></table>
+<!-- page17-->
+<table border=0 id = "page17" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>16/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>好奇心が強い。<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest16a" onclick="ChgQst16a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest16b" onclick="ChgQst16b();"><center>いいえ</center></td></tr></table>
+<!-- page18-->
+<table border=0 id = "page18" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>17/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あまり怒らない。<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest17a" onclick="ChgQst17a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest17b" onclick="ChgQst17b();"><center>いいえ</center></td></tr></table>
+<!-- page19-->
+<table border=0 id = "page19" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>18/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>他者の幸せを願っている<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest18a" onclick="ChgQst18a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest18b" onclick="ChgQst18b();"><center>いいえ</center></td></tr></table>
+<!-- page20-->
+<table border=0 id = "page20" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>19/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>気が長い<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest19a" onclick="ChgQst19a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest19b" onclick="ChgQst19b();"><center>いいえ</center></td></tr></table>
+<!-- page21-->
+<table border=0 id = "page21" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>20/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>困っている人を見かけると放っておけない<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest20a" onclick="ChgQst20a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest20b" onclick="ChgQst20b();"><center>いいえ</center></td></tr></table>
+<!-- page22-->
+<table border=0 id = "page22" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>21/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>寛大だ<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest21a" onclick="ChgQst21a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest21b" onclick="ChgQst21b();"><center>いいえ</center></td></tr></table>
+<!-- page23-->
+<table border=0 id = "page23" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>22/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>温和だ<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest22a" onclick="ChgQst22a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest22b" onclick="ChgQst22b();"><center>いいえ</center></td></tr></table>
+<!-- page24-->
+<table border=0 id = "page24" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>23/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>きっちりしている<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest23a" onclick="ChgQst23a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest23b" onclick="ChgQst23b();"><center>いいえ</center></td></tr></table>
+<!-- page25-->
+<table border=0 id = "page25" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>24/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>時間を守る<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest24a" onclick="ChgQst24a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest24b" onclick="ChgQst24b();"><center>いいえ</center></td></tr></table>
+<!-- page26-->
+<table border=0 id = "page26" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>25/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>成り行きに任せることが少ない<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest25a" onclick="ChgQst25a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest25b" onclick="ChgQst25b();"><center>いいえ</center></td></tr></table>
+<!-- page27-->
+<table border=0 id = "page27" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>26/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>勤勉だ<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest26a" onclick="ChgQst26a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest26b" onclick="ChgQst26b();"><center>いいえ</center></td></tr></table>
+<!-- page28-->
+<table border=0 id = "page28" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>27/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>計画性がある<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest27a" onclick="ChgQst27a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest27b" onclick="ChgQst27b();"><center>いいえ</center></td></tr></table>
+<!-- page29-->
+<table border=0 id = "page29" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>28/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>慎重な性格だ<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest28a" onclick="ChgQst28a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest28b" onclick="ChgQst28b();"><center>いいえ</center></td></tr></table>
+<!-- page30-->
+<table border=0 id = "page30" style="display:none" width="350">
+<tr><td height="50" colspan=3 class="class3"><center>29/29</center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>几帳面だ<br><br></center></td></tr>
+<tr><td  height="150" colspan=3><center></center></td></tr>
+<tr><td  height="50" width="150" class="class1" id="quest29a" onclick="ChgQst29a();"><center>はい</center></td><td></td>
+<td  height="50" width="150" class="class1" id="quest29b" onclick="ChgQst29b();"><center>いいえ</center></td></tr></table>
+
+<!-- page31-->
+<table border=0 id = "anser_itiran" style="display:none" width="350">
+<tr><td height="100" width="350" colspan=3 class="class7"><center>あなたのアバターは</font></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class6"><p id="kekka"></p></td></tr>
+<tr><td  height="50"  colspan=3><center></center></td></tr>
+<tr><td  height="50" width="300" class="class1" id="end1" colspan=3 onclick="location.reload();"><center>最初からやり直す</center></td></tr>
+</center>
+</body>
+</html>DOCTYPE ht<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
 <html>
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
