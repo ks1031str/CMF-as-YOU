@@ -1,0 +1,384 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+<title>TEST Sample</title>
+<style type="text/css">
+<!--
+/* ボタン */
+td.class1 {text-align:center;border:none;border-left:1px solid #333;border-top:1px solid#333;border-right:1px solid#333;border-bottom:1px solid#333;text-align:center;font-size:25px;font-family: "Arial", "メイリオ";cursor: pointer;}
+
+/* 質問画面 */
+td.class2 {text-align:center;font-size:100px;font-family: "Arial", "メイリオ";}
+td.class3 {text-align:center;font-size:20px;font-family: "Arial", "メイリオ";}
+td.class4 {text-align:center;font-size:30px;font-family: "Arial", "メイリオ";}
+td.class5 {text-align:center;font-size:40px;font-family: "Arial", "メイリオ";}
+td.class6 {font-size:20px;font-family: "Arial", "メイリオ";}
+td.class7 {text-align:center;font-size:25px;font-family: "Arial", "メイリオ";}
+td.class7c {text-align:center;cursor: pointer;font-size:25px;font-family: "Arial", "メイリオ";}
+
+
+/* タイトル画面用 */
+table.tiledBg {
+  background-image: url(https://github.com/ks1031str/CMF-as-YOU/blob/main/taptostart.jpg?raw=true);
+  background-size: 350px;
+  width: 350px;
+  height: 600px;
+  border: 0px solid;
+}
+
+/* イメージを重ねるためのスタイルシート */
+div.layer1 {position: relative;}
+div.layer2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left:0%;
+}
+div.layer3 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0%;
+    left:0%;
+}
+
+/* イメージの透過率 */
+img.opa01 {opacity: 0.1;}
+img.opa03 {opacity: 0.3;}
+img.opa05 {opacity: 0.5;}
+img.opa10 {opacity: 1.0;}
+
+/* 角丸のスタイルシート */
+img.rad0{border-radius: 0px;}
+img.rad5{border-radius: 5px;} 
+img.rad15{border-radius: 15px;} 
+img.rad20{border-radius: 20px;} 
+img.rad35{border-radius: 35px;} 
+img.rad45{border-radius: 45px;} 
+img.rad60{border-radius: 60px;} 
+
+/* 明度のスタイルシート */
+img.brg50{filter: brightness(50%);} /* 50% */
+img.brg75{filter: brightness(75%);} /* 75% */
+img.brg90{filter: brightness(90%);} /* 90% */
+img.brg100{filter: brightness(100%);} /* 100% */
+img.brg110{filter: brightness(110%);} /* 110% */
+img.brg120{filter: brightness(120%);} /* 120% */
+img.brg130{filter: brightness(130%);} /* 130% */
+
+
+/* マウスオーバー */
+
+td#quest29a:hover {background-color: #ccffcc;}
+-->
+</style>
+<script>
+
+var twtext
+var strparam
+
+var oncolor = '#ccffcc'; //オンの色
+var offcolor = '#ffffff';//オフの色
+var nnn = 0;//A
+var xxx = 0;//B
+var eee = 0;//C
+var ooo = 0;//D
+var aaa = 0;//E
+var ccc = 0;//F
+
+
+window.onload = function onLoad() {
+  var param = GetQueryString();
+  if (param == null || param["q"] == undefined) {
+    strparam = "000000";
+  } else {
+    strparam = param["q"];
+    check();
+  }
+}
+
+function GetQueryString() {
+    if (1 < document.location.search.length) {
+        var query = document.location.search.substring(1);
+        var parameters = query.split('&');
+
+        var result = new Object();
+        for (var i = 0; i < parameters.length; i++) {
+            var element = parameters[i].split('=');
+
+            var paramName = decodeURIComponent(element[0]);
+            var paramValue = decodeURIComponent(element[1]);
+
+            result[paramName] = decodeURIComponent(paramValue);
+        }
+        return result;
+    }
+    return null;
+}
+
+function check() {
+//    let str = [];
+    //ラジオボタンの中身を取得
+//   const q = [q1, q2, q3, q4, q5, q6, q7, q8, q9, q10, q11, q12, q13, q14, q15, q16, q17, q18, q19, q20, q21, q22, q23, q24, q25, q26, q27, q28 ,q29];
+    //それぞれの合計点数を入れるための変数
+//    var nnn = 0;//A
+//    var xxx = 0;//B
+//    var eee = 0;//C
+//    var ooo = 0;//D
+//    var aaa = 0;//E
+//    var ccc = 0;//F
+
+    //どのラジオボタンが選択されたか判定し、点数を加算
+
+//    for (let n = 1; n < q.length; n++) {
+//       for (let i = 0; i < q[n].length; i++) {
+//            if (q[n][i].checked) {
+//               str[n] = q[n][i].value;
+//              if (str[n] == "A") {
+//                    nnn++;
+//                } else if (str[n] == "B") {
+//                    xxx++;
+//                } else if (str[n] == "C") {
+//                    eee++;
+//                } else if (str[n] == "D") {
+//                    ooo++;
+//                } else if (str[n] == "E") {
+//                    aaa++;
+//                } else if (str[n] == "F") {
+//                    ccc++;
+//                }
+//                break;
+ //           }
+//       }
+//    }
+
+//	alert(nnn);
+//	alert(xxx);
+//	alert(eee);
+//	alert(ooo);
+//	alert(aaa);
+//	alert(ccc);
+	
+
+	nnn = Number(strparam.charAt( 0 ));
+//	xxx = Number(strparam.charAt( 1 ));
+	eee = Number(strparam.charAt( 1 ));
+	ooo = Number(strparam.charAt( 2 ));
+	aaa = Number(strparam.charAt( 3 ));
+	ccc = Number(strparam.charAt( 4 ));
+
+//	alert(nnn);
+//	alert(xxx);
+//	alert(eee);
+//	alert(ooo);
+//	alert(aaa);
+//	alert(ccc);
+	
+
+    //コメントの条件分岐
+    var message = "";//コメント
+    var layer01 = "";//レイアー1のイメージ
+    var layer02 = "";//レイアー2のイメージ
+    var layer03 = "";//レイアー3のイメージ
+    var meido = ""   ;//明度
+    var rad = ""   ;//角
+
+    if (nnn == 0) {
+        message = "あなたらしい<br>材質は<B>金属</B>";
+	layer01 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/metal.jpg?raw=true";
+    } else if (nnn == 1) {
+        message = "あなたらしい<br>材質は<B>石材</B>";
+	layer01 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/stone.jpg?raw=true";
+    } else if (nnn == 2) {
+        message = "あなたらしい<br>材質は<B>ガラス</B>";
+	layer01 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/glass.jpg?raw=true";
+    } else if (nnn == 3) {
+        message = "あなたらしい<br>材質は<B>プラスチック</B>";
+	layer01 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/plastic.jpg?raw=true";
+    } else if (nnn == 4) {
+        message = "あなたらしい<br>材質は<B>木材</B>";
+	layer01 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/wood.jpg?raw=true";
+    } else if (nnn == 5) {
+        message = "あなたらしい<br>材質は<B>布</B>";
+	layer01 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/cloth.jpg?raw=true";
+    } else {
+        message = "エラー";
+    }
+    var message2 = "";
+    if (eee == 0) {
+        message2 = "色は<B>青</B>";
+	layer02 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/blue.jpg?raw=true";
+    } else if (eee == 1) {
+        message2 = "色は<B>紫</B>";
+	layer02 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/violet.jpg?raw=true";
+    } else if (eee == 2) {
+        message2 = "色は<B>緑</B>";
+	layer02 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/green.jpg?raw=true";
+    } else if (eee == 3) {
+        message2 = "色は<B>黄色</B>";
+	layer02 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/yellow.jpg?raw=true";
+    } else if (eee == 4) {
+        message2 = "色は<B>オレンジ</B>";
+	layer02 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/orange.jpg?raw=true";
+    } else if (eee == 5) {
+        message2 = "色は<B>赤</B>";
+	layer02 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/red.jpg?raw=true";
+    } else {
+        message2 = "エラー";
+    }
+    var message3 = "";
+    if (ooo == 0) {
+        message3 = "色調は<B>ほとんどブラック</B>";
+	meido="brg10";
+    } else if (ooo == 1) {
+        message3 = "色調は<B>ダーク</B>";
+	meido="brg75";
+    } else if (ooo == 2) {
+        message3 = "色調は<B>グレイッシュ</B>";
+	meido="brg90";
+    } else if (ooo == 3) {
+        message3 = "色調は<B>ライトグレイッシュ</B>";
+	meido="brg100";
+    } else if (ooo == 4) {
+        message3 = "色調は<B>ブライト</B>";
+	meido="brg110";
+    } else if (ooo == 5) {
+        message3 = "色調は<B>ペール</B>";
+	meido="brg120";
+    } else if (ooo == 6) {
+        message3 = "色調は<B>ほとんどホワイト</B>";
+	meido="brg180";
+    } else {
+        message3 = "エラー";
+    }
+    var message4 = "";
+    if (aaa == 0) {
+        message4 = "角の処理はされていない（0㎜）</B>";
+	rad = "rad0"
+    } else if (aaa == 1) {
+        message4 = "角の処理は<B>とがっている（Rが1㎜）</B>";
+	rad = "rad5"
+    } else if (aaa == 2) {
+        message4 = "角の処理は<B>ややとがっている（Rが2㎜）</B>";
+	rad = "rad15"
+    } else if (aaa == 3) {
+        message4 = "角の処理は<B>ふつう（Rが3㎜）</B>";
+	rad = "rad20"
+    } else if (aaa == 4) {
+        message4 = "角の処理は<B>ふつう（Rが4㎜）</B>";
+	rad = "rad35"
+    } else if (aaa == 5) {
+        message4 = "角の処理は<B>まるい（Rが5㎜）</B>";
+	rad = "rad45"
+    } else if (aaa == 6) {
+        message4 = "角の処理は<B>とてもまるい（Rが6㎜）</B>";
+	rad = "rad60"
+    } else {
+        message4 = "エラー";
+    }
+    var message5 = "";
+    if (aaa == 0) {
+        message5 = "表面の処理は<B>ざらざらしている</B>";
+	layer03 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/hairiaito0.png?raw=true";
+    } else if (ccc == 1) {
+        message5 = "表面の処理は<B>マット加工</B>";
+	layer03 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/hairiaito1.png?raw=true";
+    } else if (ccc == 2) {
+        message5 = "表面の処理は<B>素材そのまま</B>";
+	layer03 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/hairiaito2.png?raw=true";
+    } else if (ccc == 3) {
+        message5 = "表面の処理は<B>やや磨かれている</B>";
+	layer03 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/hairiaito3.png?raw=true";
+    } else if (ccc == 4) {
+        message5 = "表面の処理は<B>よく磨かれている</B>";
+	layer03 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/hairiaito4.png?raw=true";
+    } else if (ccc == 5) {
+        message5 = "表面の処理は<B>よく磨かれており、透明感がある</B>";
+	layer03 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/hairaito5.png?raw=true";
+    } else if (ccc == 6) {
+        message5 = "表面の処理は<B>よく磨かれており、透明感があり、輝いている</B>";
+	layer03 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/hairaito6.png?raw=true";
+    } else if (ccc == 7) {
+        message5 = "表面の処理は<B>よく磨かれており、透明感があり、とてもよく輝いている</B>";
+	layer03 = "https://github.com/ks1031str/CMF-as-YOU/blob/main/hairaito7.png?raw=true";
+    }
+
+    //HTMLへ出力
+    var html = '<div>';
+    html += '' + message + '<br>';
+    html += '' + message2 + '<br>';
+    html += '' + message3 + '<br>';
+    html += '' + message4 + '<br>';
+    html += '' + message5 + '<br>';
+    html += '</div>';
+
+    document.getElementById("kekka").innerHTML = html;
+
+    twtext = html.replace( '<div>', '' );
+    twtext = twtext.replace( /<\/div>/g, '' );
+    twtext = twtext.replace( /<B>/g , '' );
+    twtext = twtext.replace( /<\/B>/g , '' );
+    twtext = twtext.replace( /<br>/g, '\n' );
+
+//デバック用
+//    layer01 = "";//レイアー1のイメージ
+//    layer02 = "";//レイアー2のイメージ
+//    layer03 = "";//レイアー3のイメージ
+//    meido = ""   ;//明度
+//    rad = ""   ;//角
+
+    //
+    document.getElementById("image01").src= layer01;//動的にイメージを入れ替え
+　　document.querySelector('#image01').classList.add('opa03',rad,meido);//スタイルシートにスタイル追加
+
+    document.getElementById("image02").src= layer02;//動的にイメージを入れ替え
+　　document.querySelector('#image02').classList.add('opa03',rad,meido);//スタイルシートにスタイル追加
+
+    document.getElementById("image03").src= layer03;//動的にイメージを入れ替え
+　　document.querySelector('#image03').classList.add('opa03',rad,meido);//スタイルシートにスタイル追加
+}
+
+function twitText() {
+	var s, url,page;
+	s = twtext;
+	page = "https://www.yahoo.co.jp/"
+//	url = document.location.href;
+	
+	
+	if (s != "") {
+		if (s.length > 140) {
+			//文字数制限
+			alert("テキストが140字を超えています");
+		} else {
+			//投稿画面を開く
+			alert(s)
+			url = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(s) +"&url=" + encodeURIComponent(page)
+	            window.open(url,"_blank","width=600,height=300");		}
+	}
+}
+</script>
+<body>
+<center>
+<table border=0 id = "anser_itiran" style="display:none" width="350">
+<tr><td height="100" width="350" colspan=3 class="class7"><center>あなたのアバターは</font></center></td></tr>
+<tr><td height="250" width="65" ></td><td  height="250" colspan=2>
+<div class="layer1">
+<img id="image01" src="" class="opa05">
+<div class="layer2">
+<img id="image02" src="" class="opa05">
+<div class="layer3">
+<img id="image03" src="" class="opa05">
+</div>
+</div>
+</div>
+<br>
+<tr><td height="200" width="350" colspan=3 class="class6"><p id="kekka"></p></td></tr>
+</td></tr>
+<tr><td  height="50" width="300" class="class1" id="end1" colspan=3 onclick="location.href='http://www.enpitsu.com/test/cmf44.html';"><center>最初からやり直す</center></td></tr>
+</center>
+</body>
+</html>
