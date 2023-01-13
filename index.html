@@ -62,8 +62,6 @@ img.rad45{border-radius: 45px;}
 img.rad60{border-radius: 60px;} 
 
 /* 明度のスタイルシート */
-img.brg10{filter: brightness(10%);} /* 10% */
-img.brg30{filter: brightness(30%);} /* 30% */
 img.brg50{filter: brightness(50%);} /* 50% */
 img.brg75{filter: brightness(75%);} /* 75% */
 img.brg90{filter: brightness(90%);} /* 90% */
@@ -71,8 +69,6 @@ img.brg100{filter: brightness(100%);} /* 100% */
 img.brg110{filter: brightness(110%);} /* 110% */
 img.brg120{filter: brightness(120%);} /* 120% */
 img.brg130{filter: brightness(130%);} /* 130% */
-img.brg150{filter: brightness(150%);} /* 150% */
-img.brg180{filter: brightness(180%);} /* 180% */
 
 
 /* マウスオーバー */
@@ -140,6 +136,9 @@ td#quest29a:hover {background-color: #ccffcc;}
 -->
 </style>
 <script>
+
+var twtext
+var twcode
 
 var oncolor = '#ccffcc'; //オンの色
 var offcolor = '#ffffff';//オフの色
@@ -754,7 +753,26 @@ function check() {
     html += '' + message4 + '<br>';
     html += '' + message5 + '<br>';
     html += '</div>';
+
     document.getElementById("kekka").innerHTML = html;
+
+    html += '#武蔵美卒展';
+    twtext = html.replace( '<div>', '' );
+    twtext = twtext.replace( /<\/div>/g, '' );
+    twtext = twtext.replace( /<B>/g , '' );
+    twtext = twtext.replace( /<\/B>/g , '' );
+    twtext = twtext.replace( /<br>/g, '\n' );
+//	alert(nnn);
+//	alert(xxx);
+//	alert(eee);
+//	alert(ooo);
+//	alert(aaa);
+//	alert(ccc);
+
+    twcode = "http://www.enpitsu.com/test/cmfr4.html?q="+ nnn + eee + ooo + aaa + ccc
+// + string(nnn) + string(xxx) + string(eee)  + string(ooo) + string(aaa) + string(ccc)  
+
+
 
 //デバック用
 //    layer01 = "";//レイアー1のイメージ
@@ -765,13 +783,28 @@ function check() {
 
     //
     document.getElementById("image01").src= layer01;//動的にイメージを入れ替え
-　　document.querySelector('#image01').classList.add('opa05',rad,meido);//スタイルシートにスタイル追加
+　　document.querySelector('#image01').classList.add('opa03',rad,meido);//スタイルシートにスタイル追加
 
     document.getElementById("image02").src= layer02;//動的にイメージを入れ替え
 　　document.querySelector('#image02').classList.add('opa03',rad,meido);//スタイルシートにスタイル追加
 
     document.getElementById("image03").src= layer03;//動的にイメージを入れ替え
 　　document.querySelector('#image03').classList.add('opa03',rad,meido);//スタイルシートにスタイル追加
+}
+
+function twitText() {
+	var s, url,page;
+	s = twtext;
+	page = twcode
+	if (s != "") {
+		if (s.length > 140) {
+			//文字数制限
+			alert("テキストが140字を超えています");
+		} else {
+			//投稿画面を開く
+			url = "https://twitter.com/intent/tweet?text="+ encodeURIComponent(s) +"&url=" + encodeURIComponent(page)
+	            window.open(url,"_blank","width=600,height=300");		}
+	}
 }
 </script>
 <body>
@@ -800,203 +833,203 @@ function check() {
 <!-- page2-->
 <table border=0 id = "page2" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>1/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたはあまり緊張をしない<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あまり緊張をしない<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest1a" onclick="ChgQst1a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest1b" onclick="ChgQst1b();"><center>いいえ</center></td></tr></table>
 <!-- page3-->
 <table border=0 id = "page3" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>2/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたはあまり物事を心配しない<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あまり物事を心配しない<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest2a" onclick="ChgQst2a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest2b" onclick="ChgQst2b();"><center>いいえ</center></td></tr></table>
 <!-- page4-->
 <table border=0 id = "page4" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>3/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは弱気になったことがない<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>弱気になったことがない<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest3a" onclick="ChgQst3a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest3b" onclick="ChgQst3b();"><center>いいえ</center></td></tr></table>
 <!-- page5-->
 <table border=0 id = "page5" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>4/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは大きな悩み事はない<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>大きな悩み事はない<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest4a" onclick="ChgQst4a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest4b" onclick="ChgQst4b();"><center>いいえ</center></td></tr></table>
 <!-- page6-->
 <table border=0 id = "page6" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>5/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは不安なことはない<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>不安なことはない<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest5a" onclick="ChgQst5a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest5b" onclick="ChgQst5b();"><center>いいえ</center></td></tr></table>
 <!-- page7-->
 <table border=0 id = "page7" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>6/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたはよくしゃべる<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>よくしゃべる<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest6a" onclick="ChgQst6a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest6b" onclick="ChgQst6b();"><center>いいえ</center></td></tr></table>
 <!-- page8-->
 <table border=0 id = "page8" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>7/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは友達が多いほうだ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>友達は多いほう<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest7a" onclick="ChgQst7a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest7b" onclick="ChgQst7b();"><center>いいえ</center></td></tr></table>
 <!-- page9-->
 <table border=0 id = "page9" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>8/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは他者の意見を聞くのが好きだ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>他者の意見を聞くのが好きだ<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest8a" onclick="ChgQst8a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest8b" onclick="ChgQst8b();"><center>いいえ</center></td></tr></table>
 <!-- page10-->
 <table border=0 id = "page10" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>9/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは話好きだ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>話好きだ。<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest9a" onclick="ChgQst9a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest9b" onclick="ChgQst9b();"><center>いいえ</center></td></tr></table>
 <!-- page11-->
 <table border=0 id = "page11" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>10/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは元気に楽しく日常を過ごしていると思う<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>元気に楽しく日常を過ごしていると思う。<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest10a" onclick="ChgQst10a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest10b" onclick="ChgQst10b();"><center>いいえ</center></td></tr></table>
 <!-- page12-->
 <table border=0 id = "page12" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>11/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは多才だ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>多才だ。<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest11a" onclick="ChgQst11a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest11b" onclick="ChgQst11b();"><center>いいえ</center></td></tr></table>
 <!-- page13-->
 <table border=0 id = "page13" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>12/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは先進的なものが好きだ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>先進的なものが好きだ。<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest12a" onclick="ChgQst12a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest12b" onclick="ChgQst12b();"><center>いいえ</center></td></tr></table>
 <!-- page14-->
 <table border=0 id = "page14" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>13/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは頭の回転が速い自信がある<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>頭の回転が速い自信がある。<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest13a" onclick="ChgQst13a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest13b" onclick="ChgQst13b();"><center>いいえ</center></td></tr></table>
 <!-- page15-->
 <table border=0 id = "page15" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>14/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは興味が広い<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>興味が広い。<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest14a" onclick="ChgQst14a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest14b" onclick="ChgQst14b();"><center>いいえ</center></td></tr></table>
 <!-- page16-->
 <table border=0 id = "page16" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>15/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは独創的だと言われたことがある<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>独創的だと言われたことがある。<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest15a" onclick="ChgQst15a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest15b" onclick="ChgQst15b();"><center>いいえ</center></td></tr></table>
 <!-- page17-->
 <table border=0 id = "page17" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>16/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは好奇心が強い<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>好奇心が強い。<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest16a" onclick="ChgQst16a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest16b" onclick="ChgQst16b();"><center>いいえ</center></td></tr></table>
 <!-- page18-->
 <table border=0 id = "page18" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>17/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたはあまり怒らない<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あまり怒らない。<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest17a" onclick="ChgQst17a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest17b" onclick="ChgQst17b();"><center>いいえ</center></td></tr></table>
 <!-- page19-->
 <table border=0 id = "page19" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>18/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは他者の幸せを願っている<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>他者の幸せを願っている<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest18a" onclick="ChgQst18a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest18b" onclick="ChgQst18b();"><center>いいえ</center></td></tr></table>
 <!-- page20-->
 <table border=0 id = "page20" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>19/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは気が長い<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>気が長い<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest19a" onclick="ChgQst19a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest19b" onclick="ChgQst19b();"><center>いいえ</center></td></tr></table>
 <!-- page21-->
 <table border=0 id = "page21" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>20/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは困っている人を見かけると放っておけない<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>困っている人を見かけると放っておけない<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest20a" onclick="ChgQst20a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest20b" onclick="ChgQst20b();"><center>いいえ</center></td></tr></table>
 <!-- page22-->
 <table border=0 id = "page22" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>21/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは寛大だ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>寛大だ<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest21a" onclick="ChgQst21a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest21b" onclick="ChgQst21b();"><center>いいえ</center></td></tr></table>
 <!-- page23-->
 <table border=0 id = "page23" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>22/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは温和だ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>温和だ<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest22a" onclick="ChgQst22a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest22b" onclick="ChgQst22b();"><center>いいえ</center></td></tr></table>
 <!-- page24-->
 <table border=0 id = "page24" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>23/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたはきっちりしている<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>きっちりしている<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest23a" onclick="ChgQst23a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest23b" onclick="ChgQst23b();"><center>いいえ</center></td></tr></table>
 <!-- page25-->
 <table border=0 id = "page25" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>24/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは時間を守る<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>時間を守る<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest24a" onclick="ChgQst24a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest24b" onclick="ChgQst24b();"><center>いいえ</center></td></tr></table>
 <!-- page26-->
 <table border=0 id = "page26" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>25/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは成り行きに任せることが少ない<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>成り行きに任せることが少ない<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest25a" onclick="ChgQst25a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest25b" onclick="ChgQst25b();"><center>いいえ</center></td></tr></table>
 <!-- page27-->
 <table border=0 id = "page27" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>26/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは勤勉だ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>勤勉だ<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest26a" onclick="ChgQst26a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest26b" onclick="ChgQst26b();"><center>いいえ</center></td></tr></table>
 <!-- page28-->
 <table border=0 id = "page28" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>27/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは計画性がある<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>計画性がある<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest27a" onclick="ChgQst27a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest27b" onclick="ChgQst27b();"><center>いいえ</center></td></tr></table>
 <!-- page29-->
 <table border=0 id = "page29" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>28/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは慎重な性格だ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>慎重な性格だ<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest28a" onclick="ChgQst28a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest28b" onclick="ChgQst28b();"><center>いいえ</center></td></tr></table>
 <!-- page30-->
 <table border=0 id = "page30" style="display:none" width="350">
 <tr><td height="50" colspan=3 class="class3"><center>29/29</center></td></tr>
-<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>あなたは几帳面だ<br><br></center></td></tr>
+<tr><td height="300" width="350" colspan=3 class="class7"><center><br><br>几帳面だ<br><br></center></td></tr>
 <tr><td  height="150" colspan=3><center></center></td></tr>
 <tr><td  height="50" width="150" class="class1" id="quest29a" onclick="ChgQst29a();"><center>はい</center></td><td></td>
 <td  height="50" width="150" class="class1" id="quest29b" onclick="ChgQst29b();"><center>いいえ</center></td></tr></table>
@@ -1004,7 +1037,7 @@ function check() {
 <!-- page31-->
 <table border=0 id = "anser_itiran" style="display:none" width="350">
 <tr><td height="100" width="350" colspan=3 class="class7"><center>あなたのアバターは</font></center></td></tr>
-<tr><td height="150" width="65" ></td><td  height="150"  colspan=2>
+<tr><td height="250" width="65" ></td><td  height="250" colspan=2>
 <div class="layer1">
 <img id="image01" src="" class="opa05">
 <div class="layer2">
@@ -1017,6 +1050,7 @@ function check() {
 <br>
 <tr><td height="200" width="350" colspan=3 class="class6"><p id="kekka"></p></td></tr>
 </td></tr>
+<tr><td colspan=3><a href="javascript:twitText()"><img src="https://github.com/ks1031str/CMF-as-YOU/blob/main/tweet.png?raw=true" alt="Send to Twitter"></a></td><tr>
 <tr><td  height="50" width="300" class="class1" id="end1" colspan=3 onclick="location.reload();"><center>最初からやり直す</center></td></tr>
 </center>
 </body>
