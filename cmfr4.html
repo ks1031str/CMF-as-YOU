@@ -63,6 +63,8 @@ img.rad45{border-radius: 45px;}
 img.rad60{border-radius: 60px;} 
 
 /* 明度のスタイルシート */
+img.brg10{filter: brightness(10%);} /* 10% */
+img.brg30{filter: brightness(30%);} /* 30% */
 img.brg50{filter: brightness(50%);} /* 50% */
 img.brg75{filter: brightness(75%);} /* 75% */
 img.brg90{filter: brightness(90%);} /* 90% */
@@ -70,6 +72,9 @@ img.brg100{filter: brightness(100%);} /* 100% */
 img.brg110{filter: brightness(110%);} /* 110% */
 img.brg120{filter: brightness(120%);} /* 120% */
 img.brg130{filter: brightness(130%);} /* 130% */
+img.brg150{filter: brightness(150%);} /* 150% */
+img.brg180{filter: brightness(180%);} /* 180% */
+img.brg200{filter: brightness(200%);} /* 200% *//
 
 
 /* マウスオーバー */
@@ -231,13 +236,13 @@ function check() {
     } else {
         message2 = "エラー";
     }
-    var message3 = "";
+var message3 = "";
     if (ooo == 0) {
         message3 = "色調は<B>ほとんどブラック</B>";
 	meido="brg10";
     } else if (ooo == 1) {
         message3 = "色調は<B>ダーク</B>";
-	meido="brg75";
+	meido="brg50";
     } else if (ooo == 2) {
         message3 = "色調は<B>グレイッシュ</B>";
 	meido="brg90";
@@ -246,13 +251,13 @@ function check() {
 	meido="brg100";
     } else if (ooo == 4) {
         message3 = "色調は<B>ブライト</B>";
-	meido="brg110";
+	meido="brg130";
     } else if (ooo == 5) {
         message3 = "色調は<B>ペール</B>";
-	meido="brg120";
+	meido="brg150";
     } else if (ooo == 6) {
         message3 = "色調は<B>ほとんどホワイト</B>";
-	meido="brg180";
+	meido="brg200";
     } else {
         message3 = "エラー";
     }
